@@ -48,11 +48,7 @@ const generateTodo = (data) => {
       month: "short",
       day: "numeric",
     })}`;
-  }
-
-  todoDeleteBtn.addEventListener("click", () => {
-    todoElement.remove();
-  }); */
+  } */
 };
 
 addTodoButton.addEventListener("click", () => {
