@@ -1,17 +1,21 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+A simple task tracker that allows users to organize and manage tasks efficiently.
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+The Simple Todo App features a date function for setting deadlines, allows users to add and remove tasks as necessary, and contains a checkbox toggle feature that allows for marking and unmarking of tasks as completed.
+
+![Todo App Screenshot](./images/Screenshot%202025-05-25%20025727.png)
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+- HTML5
+- CSS3
+- JavaScript
 
 ## Deployment
 
 This project is deployed on GitHub Pages:
 
-- ADD LINK HERE
+- [Live Demo](https://geneviveoliva95.github.io/se_project_todo-app/)
