@@ -45,7 +45,7 @@ class Todo {
         }
       )}`;
     } else {
-      this._todoDate.textContent = "Due: Invalid Date";
+      this._todoDate.textContent = "";
     }
 
     this._generateCheckboxEl();
