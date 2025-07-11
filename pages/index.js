@@ -11,18 +11,6 @@ const addTodoForm = document.forms["add-todo-form"];
 const addTodoCloseBtn = addTodoPopup.querySelector(".popup__close");
 const todosList = document.querySelector(".todos__list");
 
-const section = new Section({
-  items: initialTodos,
-  renderer: () => {
-    // Generate the todo item
-    // Add it to the list
-    // Tip: Refer to the forEach loop in this file
-    // Remove the old forEach loop from this file
-  },
-  containerSelector: ".todos__list",
-});
-section.renderItems();
-
 const openModal = (modal) => {
   modal.classList.add("popup_visible");
 };
@@ -56,18 +44,19 @@ addTodoForm.addEventListener("submit", (evt) => {
 
   const id = uuidv4();
   const values = { name, date, id };
-  renderTodo(values);
+  section.renderItems(values); // TODO - Fix this
   closeModal(addTodoPopup);
-});
-
-const renderTodo = (item) => {
-  const todo = generateTodo(item);
-  todosList.append(todo); // Use addItem() method instead
-};
-
-initialTodos.forEach((item) => {
-  renderTodo(item);
 });
 
 const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
 newTodoValidator.enableValidation();
+
+const section = new Section({
+  items: initialTodos,
+  renderer: (item) => {
+    const todoItem = generateTodo(item);
+    section.addItem(todoItem);
+  },
+  containerSelector: ".todos__list",
+});
+section.renderItems();
