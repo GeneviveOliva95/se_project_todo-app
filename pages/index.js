@@ -30,7 +30,7 @@ addTodoCloseBtn.addEventListener("click", () => {
 
 const generateTodo = (data) => {
   const todo = new Todo(data, "#todo-template");
-  const todoElement = todo.getView(); // Use addItem() method instead
+  const todoElement = todo.getView();
   return todoElement;
 };
 
@@ -44,7 +44,8 @@ addTodoForm.addEventListener("submit", (evt) => {
 
   const id = uuidv4();
   const values = { name, date, id };
-  section.renderItems(values); // TODO - Fix this
+  const todoElement = generateTodo(values);
+  section.addItem(todoElement);
   closeModal(addTodoPopup);
 });
 
