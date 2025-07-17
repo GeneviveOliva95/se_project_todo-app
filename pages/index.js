@@ -17,12 +17,8 @@ const addTodoPopup = new PopupWithForm({
   handleFormSubmit: () => {},
 });
 
-const openModal = (modal) => {
-  modal.classList.add("popup_visible");
-};
-
 addTodoButton.addEventListener("click", () => {
-  openModal(addTodoPopupEl);
+  addTodoPopup.open();
 });
 
 const closeModal = (modal) => {
