@@ -16,7 +16,6 @@ const addTodoPopup = new PopupWithForm({
   popupSelector: "#add-todo-popup",
   handleFormSubmit: () => {},
 });
-
 addTodoPopup.setEventListeners();
 
 addTodoButton.addEventListener("click", () => {
