@@ -21,13 +21,8 @@ addTodoButton.addEventListener("click", () => {
   addTodoPopup.open();
 });
 
-const closeModal = (modal) => {
-  modal.classList.remove("popup_visible");
-  newTodoValidator.resetValidation();
-};
-
 addTodoCloseBtn.addEventListener("click", () => {
-  closeModal(addTodoPopupEl);
+  addTodoPopup.close();
 });
 
 const generateTodo = (data) => {
@@ -48,7 +43,8 @@ addTodoForm.addEventListener("submit", (evt) => {
   const values = { name, date, id };
   const todoElement = generateTodo(values);
   section.addItem(todoElement);
-  closeModal(addTodoPopupEl);
+  newTodoValidator.resetValidation();
+  addTodoPopup.close();
 });
 
 const newTodoValidator = new FormValidator(validationConfig, addTodoForm);

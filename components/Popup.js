@@ -7,7 +7,9 @@ class Popup {
     this._popupElement.classList.add("popup_visible");
   }
 
-  close() {}
+  close() {
+    this._popupElement.classList.remove("popup_visible");
+  }
 
   _handleEscapeClose() {}
 
