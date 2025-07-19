@@ -6,7 +6,7 @@ A simple task tracker that allows users to organize and manage tasks efficiently
 
 The Simple Todo App features a date function for setting deadlines, allows users to add and remove tasks as necessary, and contains a checkbox toggle feature that allows for marking and unmarking of tasks as completed.
 
-![Todo App Screenshot](./images/Screenshot%202025-05-25%20025727.png)
+![Todo App Screenshot](images/screenshot.png)
 
 ## Technology
 
