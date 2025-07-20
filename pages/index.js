@@ -81,6 +81,6 @@ const section = new Section({
     const todoItem = generateTodo(item);
     section.addItem(todoItem);
   },
-  containerSelector: ".todos__list",
+  containerElement: todosList,
 });
 section.renderItems();
